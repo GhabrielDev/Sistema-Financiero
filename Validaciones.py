@@ -19,6 +19,16 @@ def mensaje(mensaje):
        except ValueError as e:
             print(f"Error {e} intente de nuevo por favor")
 
+def mensaje_numero():
+      while True:
+                try:
+                  time.sleep(0.5)
+                  opciones = input(f"Selecciona el 1 o el 2: ")
+                  break
+                except ValueError:
+                   print('Por favor Ingrese el 1 o el 2 no letras')
+      return opciones            
+
 def opciones_ganancia():
      time.sleep(0.5)
      print("""
@@ -52,8 +62,8 @@ def calculos_Dolares(income,name):
               time.sleep(0.5)
               print('------GANANCIA EN DOLARES -----')
               print(f'------ {name.capitalize()} ---- ')
-              print(f"Capital semanal:{income}$|Capital al mes:{mes}$|Capital al año:{year}$")
-              print("-" * 70)
+              print(f"Capital semanal:{income}$\nCapital al mes:{mes}$\nCapital al año:{year}$")
+              print("-" * 50)
 
 def calculos_Bolivares(ingreso,name,tasa_bcv):
             mensual = ingreso * 4
@@ -64,6 +74,38 @@ def calculos_Bolivares(ingreso,name,tasa_bcv):
             time.sleep(0.5)
             print('-------GANANCIA EN BOLIVARES -----')
             print(f'------ {name.capitalize()} ----')
-            print(f"Capital semanal:{sema_bcv:,.2f}bs|Capital al mes:{men_bcv:,.2f}bs|Capital al año:{anu_bcv:,.2f}bs")
-            print('=' * 70)
-            
+            print(f"Capital semanal:{sema_bcv:,.2f}bs\nCapital al mes:{men_bcv:,.2f}bs\nCapital al año:{anu_bcv:,.2f}bs")
+            print('=' * 50)
+
+
+def ingresos_extras(name):
+ datos=[]
+ while True: 
+     try:
+        print('=' * 30)
+        time.sleep(0.5)
+        extras = input(f"Tienes ingresos extras {name} si/no?:")
+        
+        if extras.lower() == 'si':
+          while True:
+              try:
+                  print('--- Escriba ''listo'' cuando ya ingrese todos sus ingresos extras ---')
+                  entrada = input(f'Ingrese su ingreso extra:$')
+
+                  if entrada.lower() == 'listo':
+                       break
+                  monto = float(entrada)
+                  datos.append(monto)
+              except ValueError as e:
+                 print(f"Por favor ingrese numeros:{e}")  
+          break
+           
+        elif extras.lower() == "no":
+                  break
+        else:
+           print(f"Opcion invalida coloque si/no")
+     except:
+        print("Error intente de nuevo")           
+     
+ return datos
+#reparar la funcion para que no sea infinita y termine
