@@ -9,6 +9,16 @@ def preguntar_numero(mensaje):
       except ValueError:
           print("¡ERROR! Coloque numeros")
 
+def mensaje(mensaje):
+     while True:
+       try:
+          texto = input(mensaje).strip().capitalize()
+          if not texto:
+               raise ValueError("No puede estar vacio el texto")
+          return texto
+       except ValueError as e:
+            print(f"Error {e} intente de nuevo por favor")
+
 def opciones_ganancia():
      time.sleep(0.5)
      print("""

@@ -1,3 +1,15 @@
-__pycache__/
-*.pyc
+# Visual Studio Code (¡esto evita las "letras raras" de las extensiones)
+.vscode/
+*.code-workspace
+
+# Archivos del sistema operativo (Windows / Mac)
 .DS_Store
+Thumbs.db
+
+# Entornos virtuales de Python (si usas Python)
+venv/
+.venv/
+__pycache__/
+
+# Archivos de variables secretas / llaves
+.env
