@@ -1,6 +1,6 @@
 import random as rd
 def exito_m():
-    key_of_the_exito = ["Resistencia","Constancia","Intencidad","Tener una rutina","Desarrollar Mentalidad de exito","Solucionar Problemas"]
+    key_of_the_exito = ["Resistencia","Constancia","Intencidad","Tener una rutina","Desarrollar Mentalidad de exito","Solucionar Problemas,Diciplina"]
     for e in key_of_the_exito:
          print(f'El exito es:{e}')
     return

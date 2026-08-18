@@ -90,14 +90,14 @@ elif eleccion == 2:
                        exito =input(f"Quieres tener exito? si/no: ")
 
                        if exito.lower() == "si":
-                             mot.exito_m()
+                              mot.exito_m()
                               print(f"\nTienes que tener todo esto para ser exitoso") 
                               print(f"Para tener exito no depende de tener plata sino valores {name}")
                        else:
                             print(f"{name} como que no quieres ser exito y cumplir tus metas") 
     
-      else:   
-       print("\nComo no tienes gastos fijos")
+        else:   
+         print("\nComo no tienes gastos fijos")
        
 else:
    print(f"Trabaje carajo")  
