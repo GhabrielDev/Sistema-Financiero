@@ -19,23 +19,22 @@ def mensaje(mensaje):
        except ValueError as e:
             print(f"Error {e} intente de nuevo por favor")
 
-def mensaje_numero():
-      while True:
-                try:
-                  time.sleep(0.5)
-                  opciones = input(f"Selecciona el 1 o el 2: ")
-                  break
-                except ValueError:
-                   print('Por favor Ingrese el 1 o el 2 no letras')
-      return opciones            
-
 def opciones_ganancia():
      time.sleep(0.5)
      print("""
-      ---- Elige una Opcion ----"
+      ---- Elige una Opcion ----
      1.Cuanto ganas al mes y al año.
      2.Cuanto ganas al año y al mes restando tu gastos fijos. 
      -----------------------------------------------------""")   
+     while True:
+                time.sleep(0.5)
+                opciones = input(f"Selecciona el 1 o el 2: ")
+                if opciones in ["1","2"]:
+                     break
+                else:
+                    print("Intente de nuevo")
+          
+     return opciones            
 
 def menu_inicio(nombre):
      while True:
@@ -73,9 +72,17 @@ def calculos_Bolivares(ingreso,name,tasa_bcv):
             anu_bcv = anual * tasa_bcv
             time.sleep(0.5)
             print('-------GANANCIA EN BOLIVARES -----')
-            print(f'------ {name.capitalize()} ----')
+            print(f'------ {name} ----')
             print(f"Capital semanal:{sema_bcv:,.2f}bs\nCapital al mes:{men_bcv:,.2f}bs\nCapital al año:{anu_bcv:,.2f}bs")
             print('=' * 50)
+
+def calculos_menos_gastos_fijo(ingreso,name,tasa_bcv,gastos_fixed,income):
+                mes = (income* 4) - gastos_fixed  * 4
+                year = mes * 12 
+                print('------ GANANCIA EN DORALES MENOS LOS GASTOS FIJOS --------') 
+                print(f'_-_-_-_-_-_-_ {name} _-_-_-_-_-_-_ ')
+                print(f"Capital semanal:\nCapital al mes:\nCapital al añó:")
+                print('= * 50')
 
 
 def ingresos_extras(name):
@@ -108,4 +115,4 @@ def ingresos_extras(name):
         print("Error intente de nuevo")           
      
  return datos
-#reparar la funcion para que no sea infinita y termine
+

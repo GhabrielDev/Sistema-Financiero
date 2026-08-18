@@ -29,16 +29,9 @@ if eleccion == 1:
            print('=' * 50)
            time.sleep(0.5)
            gastos_fixed = float(input(f"¿Cueles son tus gatos fijos?:$"))
-           val.opciones_ganancia()
-           while True:
-                try:
-                   time.sleep(0.5)
-                   opciones = input(f"Selecciona el 1 o el 2: ")
-                   break
-                except ValueError:
-                      print('Por favor Ingrese el 1 o el 2 no letras')
-
-           if opciones == '1':
+           user_choice = val.opciones_ganancia()
+           
+           if user_choice == '1':
             #Calculos para ver la ganancia mensual y anuel.Dolares
                   val.calculos_Dolares(income,name)
              
@@ -76,10 +69,9 @@ elif eleccion == 2:
     
         if gastos_fijos.lower() == "si":
               gastos_fijos = float(input(f"¿Cueles son tus gastos fijos?: "))
-              val.opciones_ganancia()
-              opciones = input(f"Selecciona el 1 o el 2: ")
-    
-              if opciones == "1":
+              user_choice= val.opciones_ganancia()
+
+              if user_choice == "1":
                   val.calculos_financieros(ingreso,name,tasa_bcv)
             
                   if ingreso >= 100 and age <= 16:
