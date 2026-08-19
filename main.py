@@ -38,16 +38,7 @@ if eleccion == 1:
                   if income >= 100 and age <= 16:
                        print(f"Excelente capital  a tus {age} años {name}")
                   else:
-                       print(f"Tienes que aumentar tu capital\npara tener liberta financiera")    
-                       exito =input(f"Quieres tener exito? si/no: ")
-                       if exito.lower() == "si":
-                              print('=' * 50 )
-                              mot.exito_m()
-                              print(f"Tienes que tener todo esto para ser exitoso") 
-                              print(f"Para tener exito no depende de tener plata sino valores {name}")
-                  
-                       else:
-                        print(f"{name} como que no quieres ser exito y cumplir tus metas") 
+                   mot.believe_in_yourself(mot.exito_m,name)
             
            else:
                  #Calculos para ver la ganancia mensual y anual
@@ -78,15 +69,8 @@ elif eleccion == 2:
                       print(f"Excelente capital  a tus {age} años {name}")
           
                   else:
-                       print(f"Tienes que aumentar tu capital\npara tener liberta financiera")    
-                       exito =input(f"Quieres tener exito? si/no: ")
-
-                       if exito.lower() == "si":
-                              mot.exito_m()
-                              print(f"\nTienes que tener todo esto para ser exitoso") 
-                              print(f"Para tener exito no depende de tener plata sino valores {name}")
-                       else:
-                            print(f"{name} como que no quieres ser exito y cumplir tus metas") 
+                      mot.believe_in_yourself(mot.exito_m,name)
+                                 
     
         else:   
          print("\nComo no tienes gastos fijos")

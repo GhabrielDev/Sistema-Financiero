@@ -76,7 +76,7 @@ def calculos_Bolivares(ingreso,name,tasa_bcv):
             print(f"Capital semanal:{sema_bcv:,.2f}bs\nCapital al mes:{men_bcv:,.2f}bs\nCapital al año:{anu_bcv:,.2f}bs")
             print('=' * 50)
 
-def calculos_menos_gastos_fijo(ingreso,name,tasa_bcv,gastos_fixed,income):
+def calculos_menos_gastos_fijo(name,gastos_fixed,income):
                 mes = (income* 4) - gastos_fixed  * 4
                 year = mes * 12 
                 print('------ GANANCIA EN DORALES MENOS LOS GASTOS FIJOS --------') 

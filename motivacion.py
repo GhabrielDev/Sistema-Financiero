@@ -9,3 +9,20 @@ def frase_millonaria():
      frase = ["El precio de la disciplina siempre es menor que el dolor del arrepentimiento.","No midas tu riqueza por el dinero que tienes, mídela por las habilidades que has construido y que nadie te puede quitar.","El éxito no se persigue; se atrae por la persona en la que te conviertes mientras trabajas en tus metas.","Los aficionados esperan tener motivación; los profesionales se levantan y construyen una rutina sin importar cómo se sientan.","Tu mente es tu activo más valioso. Si la alimentas con educación, constancia y solución de problemas, tu bolsillo se encargará del resto."]
      seleccion = rd.choice(frase)
      return seleccion
+
+def believe_in_yourself(exito_m,name):
+   while True:
+           print(f"Tienes que aumentar tu capital\npara tener libertad financiera")    
+           exito =input(f"Quieres tener exito? si/no: ")
+           if exito.lower() == "si":
+              print('=' * 50 )
+              exito_m()
+              print(f"Tienes que tener todo esto para ser exitoso") 
+              print(f"Para tener exito no depende de tener plata sino valores {name}")
+              break 
+           elif exito.lower() == "no":
+                 print(f"{name}  quieres tener exito y cumplir tus metas?")           
+                 break 
+           else:
+             print("Por favor intente de nuevo")
+               
