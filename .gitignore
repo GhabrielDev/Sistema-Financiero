@@ -6,7 +6,7 @@
 .DS_Store
 Thumbs.db
 
-# Entornos virtuales de Python (si usas Python)
+# Entornos virtuales de Python
 venv/
 .venv/
 __pycache__/

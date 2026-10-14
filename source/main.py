@@ -1,5 +1,5 @@
 import motivacion as mot
-import Validaciones as val
+import source.Validaciones as val
 import time
 
 #Sitema de gianancia neta al mes  al año para saber cuantos son tus ingresos al año y al mes
